@@ -108,7 +108,6 @@ img {
 .contacts-header {
   margin-left: auto;
   display: flex;
-  align-items: center;
 }
 .contacts-header-item + .contacts-header-item {
   margin-left: 50px;
@@ -123,9 +122,11 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 32px 0;
+  vertical-align: middle;
 }
 .link-icon {
   margin-right: 10px;
+  vertical-align: middle;
 }
 
 .contacts-header-link:hover,
@@ -180,33 +181,16 @@ img {
 .features-list {
   display: flex;
 }
-/* .features-list-item::before {
-  content: '';
-  display: block;
-  height: 120px;
-  /* outline: 1px solid red; */
-/* margin-bottom: 30px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-color: var(--section-bg-color);
-} */
-*/
-/* .icon-antenna::before {
-  background-image: url(/img/icons.svg#icon-antenna);
-}
-.icon-clock::before {
-  background-image: url(/img/icons.svg#icon-clock);
-}
-.icon-diagram::before {
-  background-image: url(/img/icons.svg#icon-diagram);
-}
-.icon-astronaut::before {
-  background-image: url(/img/icons.svg#icon-astronaut);
-} */
+
 .features-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--section-bg-color);
   width: 270px;
   height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 .features-list-item {
   flex-basis: calc((100% - 3 * 30px) / 4);
@@ -368,8 +352,11 @@ img {
   color: var(--accent-color);
 }
 
-.columns {
+.footer-sections {
   display: flex;
+  align-items: baseline;
+}
+.adress-section {
   margin-right: 70px;
 }
 .footer-links-title {
@@ -377,11 +364,30 @@ img {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 .footer-links-list {
   display: flex;
 }
+.footer-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--accent-white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-link:hover,
+.footer-link:focus,
+.footer-link:active {
+  background-color: var(--accent-color);
+}
 
+.footer-links-item + .footer-links-item {
+  margin-left: 10px;
+}
 /* ___________  ПОРТФОЛИО_______________ */
 .portfolio-title {
   font-weight: 700;

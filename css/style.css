@@ -72,12 +72,15 @@ img {
   align-items: center;
 }
 .logo {
+  display: block;
   font-family: 'Raleway', sans-serif;
   color: var(--accent-color);
   text-decoration: none;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+}
+.header .logo {
   padding: 24px 0;
   margin-right: 73px;
 }
@@ -97,13 +100,13 @@ img {
   color: var(--accent-color);
 }
 .link {
+  display: block;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
-  padding: 24px;
 }
 .contacts-header {
   margin-left: auto;
@@ -113,20 +116,19 @@ img {
   margin-left: 50px;
 }
 .contacts-header-link {
-  display: block;
+  display: flex;
   text-decoration: none;
   color: var(--primary-text-color);
-  fill: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 32px 0;
-  vertical-align: middle;
+  align-items: center;
 }
 .link-icon {
   margin-right: 10px;
-  vertical-align: middle;
+  fill: currentColor;
 }
 
 .contacts-header-link:hover,
@@ -136,7 +138,6 @@ img {
 .link:focus,
 .link:active {
   color: var(--accent-color);
-  fill: var(--accent-color);
 }
 /* баннер */
 .section {
@@ -231,11 +232,15 @@ img {
 /* команда */
 .team {
   background-color: var(--section-bg-color);
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .team-list {
   display: flex;
 }
 .team-list .item {
+  border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -245,10 +250,9 @@ img {
 }
 .team-card {
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: var(--accent-white-color);
+  padding: 30px;
   border-radius: 0px 0px 4px 4px;
+  background-color: var(--accent-white-color);
 }
 .team-name {
   font-weight: 500;
@@ -276,13 +280,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: var(--clients-logo-color);
+  color: var(--clients-logo-color);
+}
+.team-social-icon {
+  fill: currentColor;
 }
 .team-social-link:hover,
-.team-social-link :focus,
-.team-social-link :active {
+.team-social-link:focus,
+.team-social-link:active {
   background-color: var(--accent-color);
-  fill: var(--accent-white-color);
+  color: var(--accent-white-color);
 }
 /* постоянные клиенты */
 .clients-list {
@@ -291,10 +298,8 @@ img {
 .clients-item + .clients-item {
   margin-left: 30px;
 }
-.clients-item {
-}
+
 .clients-link {
-  fill: var(--clients-logo-color);
   width: 170px;
   height: 92px;
   border: 1px solid var(--clients-logo-color);
@@ -302,21 +307,34 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--clients-logo-color);
+}
+.client-icon {
+  fill: currentColor;
 }
 .clients-link:hover,
 .clients-link:focus,
 .clients-link:active {
-  fill: var(--accent-color);
+  color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
 /* футер */
 .footer {
+  width: 1600px;
   background-color: var(--footer-bg-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.footer-element:not(:last-child) {
+.footer .logo {
   margin-bottom: 20px;
+}
+.footer-adress {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.17;
 }
 .foot-item:not(:last-child) {
   margin-bottom: 10px;
@@ -326,10 +344,6 @@ img {
 }
 
 .address-foot {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.17px;
   text-decoration: none;
   color: var(--footer-text-color);
 }
@@ -339,10 +353,6 @@ img {
   color: var(--accent-color);
 }
 .address-post {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.17;
   text-decoration: none;
   color: var(--accent-white-color);
 }
@@ -359,7 +369,8 @@ img {
 .adress-section {
   margin-right: 70px;
 }
-.footer-links-title {
+.footer-links-text {
+  display: block;
   color: var(--accent-white-color);
   font-size: 14px;
   line-height: 1.14;
@@ -458,9 +469,15 @@ img {
   border: 1px solid #eeeeee;
   border-top: 0;
 }
-.card:hover,
-.card:focus,
-.card:active {
+.card-link {
+  text-decoration: none;
+  display: block;
+  color: var(--primary-text-color);
+}
+.card-link:hover,
+.card-link:focus,
+.card-link:active {
+  border: none;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
